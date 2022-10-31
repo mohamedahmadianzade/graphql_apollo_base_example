@@ -12,6 +12,7 @@ const server = new ApolloServer({
 
 const { url } = await startStandaloneServer(server, {
     listen: { port: 4000 },
+    // define context object which is shared among all resolvers ( bussiness logic )
     context: async ({ req, res }) => {
         return {
             accessToken: req.headers.authorization,
