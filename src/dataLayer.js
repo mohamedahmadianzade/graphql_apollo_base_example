@@ -52,7 +52,9 @@ export class DataLayer {
     }
 
 
-    getBooks() {
+    getBooks({title}) {
+        if(title)
+           return this.books.filter(item=>item.title.includes(title))
         return this.books
     }
 }

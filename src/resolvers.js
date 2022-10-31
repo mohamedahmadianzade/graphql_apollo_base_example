@@ -5,8 +5,8 @@ export const resolvers = {
         authors: () => {
             return dataLayer.getAuthors()
         } , 
-        books: () => {
-            return dataLayer.getBooks()
+        books: (_,params,context,info) => {
+            return dataLayer.getBooks(params)
         }
     } ,
     Mutation:{
@@ -16,7 +16,7 @@ export const resolvers = {
         } , 
         addBook(_,params,context,info)
         {
-            return dataLayer.addBook(params)
+            return dataLayer.addBook(params.book)
         }
     }
 

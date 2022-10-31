@@ -15,12 +15,17 @@ type Book{
 
 type Query{
     authors:[Author]
-    books:[Book]
+    books(title:String):[Book]
 }
 
 type Mutation{
     addAuthor(fname:String , lname:String , age:Int):Author
-    addBook(title:String , price:Int):Book
+    addBook(book:NewBook):Book
+}
+
+input NewBook{
+    title:String
+    price:Int
 }
 
 `
