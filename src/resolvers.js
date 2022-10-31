@@ -8,6 +8,16 @@ export const resolvers = {
         books: () => {
             return dataLayer.getBooks()
         }
+    } ,
+    Mutation:{
+        addAuthor(_,params,context,info)
+        {
+            return dataLayer.addAuthor(params)
+        } , 
+        addBook(_,params,context,info)
+        {
+            return dataLayer.addBook(params)
+        }
     }
 
 }

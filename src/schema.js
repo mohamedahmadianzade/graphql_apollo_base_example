@@ -18,4 +18,9 @@ type Query{
     books:[Book]
 }
 
+type Mutation{
+    addAuthor(fname:String , lname:String , age:Int):Author
+    addBook(title:String , price:Int):Book
+}
+
 `
