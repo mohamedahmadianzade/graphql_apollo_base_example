@@ -1,4 +1,5 @@
 import { uuid } from 'uuidv4';
+import { GraphQLError } from "graphql";
 export class DataLayer {
     authors = [
         {
@@ -24,7 +25,12 @@ export class DataLayer {
 
     ]
     getAuthors() {
-        return this.authors
+        try {
+            return this.authors
+        } catch (error) {
+            throw new GraphQLError("Error happae")
+
+        }
     }
 
 
