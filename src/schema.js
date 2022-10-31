@@ -13,10 +13,18 @@ type Book{
     author:[Author],
     authorId:Int
 }
+type Product{
+    id:Int
+    title:String
+    description:String
+    price:Int
+
+}
 
 type Query{
     authors:[Author]
     books(title:String):[Book]
+    products(productId:Int):[Product]
 }
 
 type Mutation{

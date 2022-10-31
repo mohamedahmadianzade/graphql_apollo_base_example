@@ -10,6 +10,9 @@ export const resolvers = {
         } , 
         books: (_,params,context,info) => {
             return dataLayer.getBooks(params)
+        } ,
+        products:(parent,param,context,info)=>{
+            return context.dataSources.productDataSource.getProducts(param)
         }
     } ,
     Mutation:{
