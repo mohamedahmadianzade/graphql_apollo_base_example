@@ -11,5 +11,10 @@ const server = new ApolloServer({
 
 const { url } = await startStandaloneServer(server, {
     listen: { port: 4000 },
+    context: async ({ req, res }) => {
+        return {
+            accessToken: req.headers.authorization
+        }
+    }
 });
 console.log("Apollo server is running at Port 4000");
