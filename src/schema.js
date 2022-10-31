@@ -4,6 +4,12 @@ type Person{
     fname:String
     lname:String
     age:Int
+    books:[Book]
+}
+
+type Book{
+    title:String
+    price:Int
 }
 
 type Query{
