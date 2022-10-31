@@ -1,5 +1,5 @@
 export class DataLayer {
-    getPerson() {
+    getAuthors() {
         return [
             {
 
@@ -23,6 +23,17 @@ export class DataLayer {
                 ]
 
             }
+        ]
+    }
+
+    getBooks(){
+        return [
+            { title: "book", price: "1000" } , 
+            { title: "book1", price: "1000" },
+            { title: "book2", price: "1000" },
+            { title: "book3", price: "2000" },
+            { title: "book4", price: "3000" },
+
         ]
     }
 }

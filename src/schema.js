@@ -1,5 +1,5 @@
 export const typeDefs = `#graphql
-type Person{
+type Author{
     id:ID
     fname:String
     lname:String
@@ -10,9 +10,12 @@ type Person{
 type Book{
     title:String
     price:Int
+    author:[Author]
 }
 
 type Query{
-    person:[Person]
+    authors:[Author]
+    books:[Book]
 }
+
 `

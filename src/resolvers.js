@@ -2,8 +2,11 @@ import { DataLayer } from "./dataLayer.js"
 let dataLayer = new DataLayer();
 export const resolvers = {
     Query: {
-        person: () => {
-            return dataLayer.getPerson()
+        authors: () => {
+            return dataLayer.getAuthors()
+        } , 
+        books: () => {
+            return dataLayer.getBooks()
         }
     }
 
