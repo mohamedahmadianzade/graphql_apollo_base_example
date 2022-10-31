@@ -10,7 +10,8 @@ type Author{
 type Book{
     title:String
     price:Int
-    author:[Author]
+    author:[Author],
+    authorId:Int
 }
 
 type Query{

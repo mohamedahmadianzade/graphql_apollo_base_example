@@ -18,6 +18,12 @@ export const resolvers = {
         {
             return dataLayer.addBook(params.book)
         }
-    }
+    },
+    Author:{
+        books(parent)
+        {
+            return dataLayer.getBooks({authorId:parent.id})
+        }
+    },
 
 }
